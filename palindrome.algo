@@ -1,0 +1,21 @@
+ALGORITHM algorithm_name
+VAR
+    word  : STRING;
+    n,i,j:INTEGER
+    tab : ARRAY_OF STRING[100];
+    
+BEGIN
+    read(word)
+    tab:=word
+FOR i FROM 0 TO word.length DO
+    FOR j FROM 0 TO word.length-1 DO
+        IF (tab[i]=tab[j-1]) THEN
+            Write(" A word is a palindrome")
+           
+            ELSE
+            Write(" A word is not a palindrome")
+            END_IF
+        END_IF
+    END_FOR
+END_FOR
+END
