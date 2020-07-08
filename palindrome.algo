@@ -1,21 +1,70 @@
-ALGORITHM algorithm_name
+// ALGORITHM algorithm_name
+// VAR
+//     word  : STRING;
+//     n,i,j:INTEGER
+//     tab : ARRAY_OF STRING[100];
+    
+// BEGIN
+//     read(word)
+//     tab:=word
+//     a:=word.length
+//     WHILE (a<2) DO
+//         if (a <2) THEN
+//           Write(" A word is a palindrome")
+//           if
+
+
+//     END_WHILE
+// // FOR i FROM 0 TO word.length DO
+// //         IF (tab[i]=tab[a]) THEN
+// //             Write(" A word is a palindrome")
+// //             ELSE
+// //             Write(" A word is not a palindrome")
+// //             END_IF
+// // END_FOR
+// END
+
+ALGORITHM palindrome ;
+
 VAR
-    word  : STRING;
-    n,i,j:INTEGER
-    tab : ARRAY_OF STRING[100];
+    word : STRING;
+    i:INTEGER
+    s,e:INTEGER;
     
 BEGIN
     read(word)
-    tab:=word
-FOR i FROM 0 TO word.length DO
-    FOR j FROM 0 TO word.length-1 DO
-        IF (tab[i]=tab[j-1]) THEN
-            Write(" A word is a palindrome")
-           
-            ELSE
-            Write(" A word is not a palindrome")
-            END_IF
-        END_IF
-    END_FOR
-END_FOR
+FUNCTION poli(word,s,e) : string
+VAR
+
+BEGIN
+    e:=word.length-1
+    s=0
+ IF(word.length<2)THEN
+    RETURN True ;
+    ELSE IF (word[s]===word[e]) THEN
+      return poli(word,s+1,e-1)
+    ELSE
+    RETURN False ;
+    END_IF
+    Write(" A word is a palindrome")
 END
+
+
+
+
+
+
+
+// function isPli(word , s , e ){
+//     if(condition d'arret )
+//     return TRUE 
+//     else if(arr[s]===arr[length-1]){
+//         return isPli(word , s+1 , e-1 )
+//     }else return False 
+// }
+
+// isPolu("mirak" , 0 , "miram".length)
+// isPoli ('miram , 1 , miram.length -1 ')
+
+
+
